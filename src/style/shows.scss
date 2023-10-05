@@ -2,11 +2,16 @@
 
 .shows {
     padding: 2vw 5.6vw;
+    min-height: 50vw;
     &__list {
         margin-top: 44px;
         display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
 
         &--is-active {
             display: grid;
@@ -22,6 +27,13 @@
     &__tabs {
         display: flex;
         justify-content: center;
+
+        @media (max-width: 768px) {
+            white-space: nowrap;
+            overflow-x: scroll;
+            //padding-left: 18px;
+        }
+
         &__button {
             color: variaveis.$corTextoScundario;
             font-size: 20px;
@@ -34,6 +46,10 @@
             border-bottom: 5px solid transparent;
             &--is-active {
                 border-color: variaveis.$corTextoScundario;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 16px;
             }
         }
     }

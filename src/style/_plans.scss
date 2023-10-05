@@ -1,0 +1,52 @@
+@use "variaveis";
+
+.plans {
+    padding: 5.6vw ;
+
+    h2 {
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around; //para distribuir as margens de forma padrão para os elemntos
+        margin-top: 50px;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        
+        
+        &__item {
+            text-align: center;
+            padding: 60px 44px 44px;
+            max-width: 380px;
+            width: 100%;
+
+
+            &:nth-child(2) { //pseudo do seletor para selecionar um elemnto quando ele se repete 
+                background-image: url(../images/images/fundo_combo_plus.png);
+                background-repeat: no-repeat; // responsavel por impedir que o elemnto se repita como por exeplo usando o background-image para a imagem nçao se repetir.
+                background-size: contain; //Responsavel por fazer a escalação da imagem procurando preservar a proporção dela
+            } 
+
+            img {
+                height: 83px;
+            }
+            strong {
+                display: block;
+                margin-top: 24px;
+            }
+
+            P {
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+
+    p {
+        text-align: center;
+    }
+}
